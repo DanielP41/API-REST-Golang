@@ -18,7 +18,7 @@ func TestHealthCheck(t *testing.T) {
 		w.Write([]byte("OK"))
 	})
 
-	handler.ServeHTTP(rr, r)
+	handler.ServeHTTP(rr, req) // ← CORREGIDO: era 'r', ahora es 'req'
 
 	if status := rr.Code; status != http.StatusOK {
 		t.Errorf("handler returned wrong status code: got %v want %v",
