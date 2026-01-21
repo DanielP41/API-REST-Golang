@@ -2,14 +2,16 @@
 
 Proyecto base de API en Go con PostgreSQL.
 
+![Arquitectura del Proyecto](docs/assets/architecture.png)
+
 ## Estructura de Carpetas
 
 - `cmd/api`: Punto de entrada de la aplicación.
 - `internal/`: Lógica interna de la aplicación.
-    - `database/`: Conexión y migraciones.
-    - `handlers/`: Controladores HTTP.
-    - `models/`: Definición de datos.
-    - `repository/`: Capa de persistencia.
+  - `database/`: Conexión y migraciones.
+  - `handlers/`: Controladores HTTP.
+  - `models/`: Definición de datos.
+  - `repository/`: Capa de persistencia.
 - `scripts/`: Scripts de base de datos.
 - `tests/`: Pruebas de integración.
 
