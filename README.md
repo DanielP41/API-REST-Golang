@@ -1,35 +1,34 @@
-# 🚀 ARGolang
+# ARGolang
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/DanielP41/API-REST-Golang)](https://go.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Proyecto base de API REST robusta desarrollada en Go, utilizando PostgreSQL para la persistencia de datos. Diseñada con una arquitectura limpia y modular.
 
-## 🏛️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ![Arquitectura del Proyecto](docs/assets/architecture.png)
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- [x] CRUD completo de tareas (Tasks).
-- [x] Validación de datos de entrada.
-- [x] Conexión robusta con PostgreSQL mediante `sqlx`.
-- [x] Gestión de variables de entorno con `.env`.
-- [x] Pipeline de CI/CD configurado con GitHub Actions.
-- [x] Estructura de carpetas estandarizada para Go.
+- CRUD completo de tareas (Tasks).
+- Validación de datos de entrada.
+- Conexión robusta con PostgreSQL mediante sqlx.
+- Gestión de variables de entorno con .env.
+- Pipeline de CI/CD configurado con GitHub Actions.
+- Estructura de carpetas estandarizada para Go.
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - **Lenguaje:** [Go](https://go.dev/) (v1.21+)
 - **Base de Datos:** [PostgreSQL](https://www.postgresql.org/)
 - **Librerías principales:**
-  - `sqlx`: Extensión para `database/sql` para facilitar consultas.
+  - `sqlx`: Extensión para database/sql para facilitar consultas.
   - `godotenv`: Carga de variables de entorno.
   - `lib/pq`: Driver de PostgreSQL para Go.
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 .
@@ -44,7 +43,7 @@ Proyecto base de API REST robusta desarrollada en Go, utilizando PostgreSQL para
 └── docs/               # Documentación y assets
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Método | Endpoint | Descripción |
 | :--- | :--- | :--- |
@@ -55,7 +54,7 @@ Proyecto base de API REST robusta desarrollada en Go, utilizando PostgreSQL para
 | `PUT` | `/api/task?id={id}` | Actualiza una tarea existente |
 | `DELETE` | `/api/task?id={id}` | Elimina una tarea |
 
-## 🚀 Inicio Rápido
+## Inicio Rápido
 
 1. **Requisitos**: Tener instalado Go 1.21+ y PostgreSQL.
 2. **Configuración**:
@@ -76,6 +75,3 @@ Proyecto base de API REST robusta desarrollada en Go, utilizando PostgreSQL para
    ```bash
    make test
    ```
-
----
-Desarrollado por [DanielP41](https://github.com/DanielP41)
