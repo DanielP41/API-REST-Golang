@@ -1,27 +1,81 @@
-# ARGolang
+# 🚀 ARGolang
 
-Proyecto base de API en Go con PostgreSQL.
+[![Go Version](https://img.shields.io/github/go-mod/go-version/DanielP41/API-REST-Golang)](https://go.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Proyecto base de API REST robusta desarrollada en Go, utilizando PostgreSQL para la persistencia de datos. Diseñada con una arquitectura limpia y modular.
+
+## 🏛️ Arquitectura del Sistema
 
 ![Arquitectura del Proyecto](docs/assets/architecture.png)
 
-## Estructura de Carpetas
+---
 
-- `cmd/api`: Punto de entrada de la aplicación.
-- `internal/`: Lógica interna de la aplicación.
-  - `database/`: Conexión y migraciones.
-  - `handlers/`: Controladores HTTP.
-  - `models/`: Definición de datos.
-  - `repository/`: Capa de persistencia.
-- `scripts/`: Scripts de base de datos.
-- `tests/`: Pruebas de integración.
+## ✨ Funcionalidades
 
-## Requisitos
+- [x] CRUD completo de tareas (Tasks).
+- [x] Validación de datos de entrada.
+- [x] Conexión robusta con PostgreSQL mediante `sqlx`.
+- [x] Gestión de variables de entorno con `.env`.
+- [x] Pipeline de CI/CD configurado con GitHub Actions.
+- [x] Estructura de carpetas estandarizada para Go.
 
-- Go 1.21+
-- PostgreSQL
+## 🛠️ Tecnologías
 
-## Inicio Rápido
+- **Lenguaje:** [Go](https://go.dev/) (v1.21+)
+- **Base de Datos:** [PostgreSQL](https://www.postgresql.org/)
+- **Librerías principales:**
+  - `sqlx`: Extensión para `database/sql` para facilitar consultas.
+  - `godotenv`: Carga de variables de entorno.
+  - `lib/pq`: Driver de PostgreSQL para Go.
 
-1. Copia el archivo `.env.example` a `.env` y configura tus variables.
-2. Ejecuta `make run` para iniciar el servidor.
-3. Ejecuta `make test` para correr las pruebas.
+## 📂 Estructura del Proyecto
+
+```text
+.
+├── cmd/api             # Punto de entrada de la aplicación
+├── internal/           # Lógica privada del negocio
+│   ├── database        # Conexión y configuración de DB
+│   ├── handlers        # Controladores HTTP (Manejo de requests)
+│   ├── models          # Definiciones de estructuras de datos
+│   └── repository      # Capa de persistencia (SQL)
+├── scripts/            # Scripts útiles (DB, setups)
+├── tests/              # Pruebas automatizadas
+└── docs/               # Documentación y assets
+```
+
+## 📡 API Endpoints
+
+| Método | Endpoint | Descripción |
+| :--- | :--- | :--- |
+| `GET` | `/health` | Verifica el estado de la API |
+| `GET` | `/api/tasks` | Lista todas las tareas |
+| `POST` | `/api/tasks` | Crea una nueva tarea |
+| `GET` | `/api/task?id={id}` | Obtiene una tarea por ID |
+| `PUT` | `/api/task?id={id}` | Actualiza una tarea existente |
+| `DELETE` | `/api/task?id={id}` | Elimina una tarea |
+
+## 🚀 Inicio Rápido
+
+1. **Requisitos**: Tener instalado Go 1.21+ y PostgreSQL.
+2. **Configuración**:
+
+   ```bash
+   cp .env.example .env
+   # Edita el archivo .env con tus credenciales de base de datos
+   ```
+
+3. **Ejecución**:
+
+   ```bash
+   make run
+   ```
+
+4. **Pruebas**:
+
+   ```bash
+   make test
+   ```
+
+---
+Desarrollado por [DanielP41](https://github.com/DanielP41)
