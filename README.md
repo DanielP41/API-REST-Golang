@@ -2,75 +2,75 @@
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/DanielP41/API-REST-Golang)](https://go.dev/)
 
-Proyecto base de API REST robusta desarrollada en Go, utilizando PostgreSQL para la persistencia de datos. Diseñada con una arquitectura limpia y modular.
+Robust REST API base project developed in Go, utilizing PostgreSQL for data persistence. Designed with a clean and modular architecture.
 
-## Arquitectura del Sistema
+## System Architecture
 
-![Arquitectura del Proyecto](docs/assets/architecture.png)
+![Project Architecture](docs/assets/architecture.png)
 
 ---
 
-## Funcionalidades
+## Features
 
-- CRUD completo de tareas (Tasks).
-- Validación de datos de entrada.
-- Conexión robusta con PostgreSQL mediante sqlx.
-- Gestión de variables de entorno con .env.
-- Pipeline de CI/CD configurado con GitHub Actions.
-- Estructura de carpetas estandarizada para Go.
+- Full CRUD for tasks.
+- Input data validation.
+- Robust PostgreSQL connection via sqlx.
+- Environment variable management with .env.
+- CI/CD pipeline configured with GitHub Actions.
+- Standardized folder structure for Go projects.
 
-## Tecnologías
+## Technologies
 
-- **Lenguaje:** [Go](https://go.dev/) (v1.21+)
-- **Base de Datos:** [PostgreSQL](https://www.postgresql.org/)
-- **Librerías principales:**
-  - `sqlx`: Extensión para database/sql para facilitar consultas.
-  - `godotenv`: Carga de variables de entorno.
-  - `lib/pq`: Driver de PostgreSQL para Go.
+- **Language:** [Go](https://go.dev/) (v1.21+)
+- **Database:** [PostgreSQL](https://www.postgresql.org/)
+- **Core Libraries:**
+  - `sqlx`: Extension to database/sql for easier querying.
+  - `godotenv`: Environment variable loading.
+  - `lib/pq`: PostgreSQL driver for Go.
 
-## Estructura del Proyecto
+## Project Structure
 
 ```text
 .
-├── cmd/api             # Punto de entrada de la aplicación
-├── internal/           # Lógica privada del negocio
-│   ├── database        # Conexión y configuración de DB
-│   ├── handlers        # Controladores HTTP (Manejo de requests)
-│   ├── models          # Definiciones de estructuras de datos
-│   └── repository      # Capa de persistencia (SQL)
-├── scripts/            # Scripts útiles (DB, setups)
-├── tests/              # Pruebas automatizadas
-└── docs/               # Documentación y assets
+├── cmd/api             # Application entry point
+├── internal/           # Private business logic
+│   ├── database        # Database connection and configuration
+│   ├── handlers        # HTTP controllers (Request handling)
+│   ├── models          # Data structure definitions
+│   └── repository      # Persistence layer (SQL)
+├── scripts/            # Useful scripts (DB, setups)
+├── tests/              # Automated tests
+└── docs/               # Documentation and assets
 ```
 
 ## API Endpoints
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 | :--- | :--- | :--- |
-| `GET` | `/health` | Verifica el estado de la API |
-| `GET` | `/api/tasks` | Lista todas las tareas |
-| `POST` | `/api/tasks` | Crea una nueva tarea |
-| `GET` | `/api/task?id={id}` | Obtiene una tarea por ID |
-| `PUT` | `/api/task?id={id}` | Actualiza una tarea existente |
-| `DELETE` | `/api/task?id={id}` | Elimina una tarea |
+| `GET` | `/health` | Check API health status |
+| `GET` | `/api/tasks` | List all tasks |
+| `POST` | `/api/tasks` | Create a new task |
+| `GET` | `/api/task?id={id}` | Get a task by ID |
+| `PUT` | `/api/task?id={id}` | Update an existing task |
+| `DELETE` | `/api/task?id={id}` | Delete a task |
 
-## Inicio Rápido
+## Quick Start
 
-1. **Requisitos**: Tener instalado Go 1.21+ y PostgreSQL.
-2. **Configuración**:
+1. **Requirements**: Have Go 1.21+ and PostgreSQL installed.
+2. **Configuration**:
 
    ```bash
    cp .env.example .env
-   # Edita el archivo .env con tus credenciales de base de datos
+   # Edit the .env file with your database credentials
    ```
 
-3. **Ejecución**:
+3. **Run**:
 
    ```bash
    make run
    ```
 
-4. **Pruebas**:
+4. **Test**:
 
    ```bash
    make test
